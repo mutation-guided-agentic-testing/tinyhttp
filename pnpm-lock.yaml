@@ -60,6 +60,9 @@ importers:
       regexparam:
         specifier: 3.0.0
         version: 3.0.0
+      stryker-reporter-llm:
+        specifier: ^0.1.0
+        version: 0.1.0(@stryker-mutator/api@9.5.0)
       supertest-fetch:
         specifier: 2.0.0
         version: 2.0.0
@@ -1840,6 +1843,9 @@ packages:
   mutation-testing-report-schema@3.7.1:
     resolution: {integrity: sha512-aKnIreO4je4B0mWD/pAPWw0IZ35de6ScL2nexUOKI/Lt0Qd7nGq1sH7JqmQUd7iqEokg0JlgmeiW5ghpOuP1og==}
 
+  mutation-testing-report-schema@3.7.3:
+    resolution: {integrity: sha512-BHm3MYq+ckO+t5CtlG8zpqxc75rdJCkxVlE+fGuGJM3F7tNCQ/OW2N+TQVHN3BHsYa84+BFc6g3AwDYkUsw2MA==}
+
   mute-stream@3.0.0:
     resolution: {integrity: sha512-dkEJPVvun4FryqBmZ5KhDo0K9iDXAwn08tMLDinNdRBNPcYEDiWYysLcc6k3mjTMlbP9KyylvRpd4wFtwrT9rw==}
     engines: {node: ^20.17.0 || >=22.9.0}
@@ -2127,6 +2133,12 @@ packages:
   strip-final-newline@4.0.0:
     resolution: {integrity: sha512-aulFJcD6YK8V1G7iRB5tigAP4TsHBZZrOV8pjV++zdUwmeV8uzbY7yn6h9MswN62adStNZFuCIx4haBnRuMDaw==}
     engines: {node: '>=18'}
+
+  stryker-reporter-llm@0.1.0:
+    resolution: {integrity: sha512-a9UNBO/pEzU4k2vXiiXcNZds6LQ0S5emEtmg2dcGRzvFlG/8xLNpyB8S5IT1LtSZLAlUEkQ7V0lHTdqaUhyi3A==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      '@stryker-mutator/api': '>=9.0.0'
 
   supertest-fetch@2.0.0:
     resolution: {integrity: sha512-Mx2ZszLJkrBMFt7fmyML12y+u2yHAN5FF94yOzZXHzrTtsS59fjdbqh9G4OAPDM14jnkDkcLk2AgCVGJZcVoUg==}
@@ -4024,6 +4036,8 @@ snapshots:
 
   mutation-testing-report-schema@3.7.1: {}
 
+  mutation-testing-report-schema@3.7.3: {}
+
   mute-stream@3.0.0: {}
 
   nanoid@3.3.11: {}
@@ -4286,6 +4300,12 @@ snapshots:
   strip-bom@3.0.0: {}
 
   strip-final-newline@4.0.0: {}
+
+  stryker-reporter-llm@0.1.0(@stryker-mutator/api@9.5.0):
+    dependencies:
+      '@stryker-mutator/api': 9.5.0
+      minimatch: 10.1.1
+      mutation-testing-report-schema: 3.7.3
 
   supertest-fetch@2.0.0: {}
 
