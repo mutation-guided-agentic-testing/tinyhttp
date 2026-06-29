@@ -7,6 +7,7 @@ const config = {
   plugins: [
     '@stryker-mutator/vitest-runner',
     '@stryker-mutator/typescript-checker',
+    "stryker-reporter-llm"
   ],
   mutate: ['packages/*/src/**/*.ts', '!packages/*/src/**/*.d.ts'],
   testFiles: ['tests/**/*.test.ts'],
