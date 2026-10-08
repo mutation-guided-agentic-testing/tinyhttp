@@ -49,6 +49,16 @@ describe('getURLParams(reqUrl, url)', () => {
       url: 'Foo Bar'
     })
   })
+  it('does not read captures beyond the declared parameter keys', () => {
+    const regex = { pattern: /^\/(foo)(bar)$/, keys: ['first'] }
+
+    expect(getURLParams(regex, '/foobar')).toStrictEqual({ first: 'foo' })
+  })
+  it('returns no params for a matched pattern without parameter keys', () => {
+    const regex = { pattern: /^\/anything$/, keys: false }
+
+    expect(getURLParams(regex, '/anything')).toStrictEqual({})
+  })
 })
 describe('getPathname(url)', () => {
   it('returns pathname of a path', () => {
