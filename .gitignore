@@ -12,6 +12,8 @@ examples/aws/.build
 coverage.lcov
 .gitsigners
 *.tsbuildinfo
+
 # stryker temp files
 .stryker-tmp
+.stryker-output
 reports
